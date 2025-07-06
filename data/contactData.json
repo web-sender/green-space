@@ -1,0 +1,47 @@
+{
+  "title": "Обсудим детали проекта?",
+  "description": "Свяжитесь с нами",
+  "form": {
+    "fields": {
+      "name": {
+        "type": "name", 
+        "placeholder": "Имя", 
+        "required": true
+      },
+      "tel": {
+        "type": "tel", 
+        "placeholder": "Телефон"
+      },
+      "comment": {
+        "type": "textarea", 
+        "placeholder": "Комментарий", 
+        "required": true
+      }
+    },
+    "button": {
+      "text": "Отправить",
+      "agreeText": "Нажимая на кнопку, я даю согласие на обработку персональных данных"
+    },
+    "agreeField": {
+      "text": "Я ознакомился и принимаю соглашение об условиях использования и политики конфиденциальности, в соответствие со всеми указаными в них правилами обработки данных.",
+      "imgUrl": "/icon/check_mark.webp"
+    }
+  },
+  "social": [
+    { 
+      "imgUrl": "/icon/social/Instagram.webp",
+      "linkUrl": "/",
+      "altText": ""
+    },
+    { 
+      "imgUrl": "/icon/social/Pinterest.webp",
+      "linkUrl": "/",
+      "altText": ""
+    },
+    { 
+      "imgUrl": "/icon/social/Vk.webp",
+      "linkUrl": "/",
+      "altText": ""
+    }
+  ]
+}

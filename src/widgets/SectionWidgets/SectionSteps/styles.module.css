@@ -1,0 +1,25 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-md);
+  background-color: transparent;
+  color: rgb(var(--color-text));
+  width: 100%;
+  padding: var(--section-padding);
+}
+.titleWrap {
+  padding: var(--size-sm);
+  text-align: center;
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .titleWrap {
+    padding: var(--size-xs) calc(var(--size-xll) * 1.65);
+  }
+}
+
+@media (min-width: 1200px) {
+  .titleWrap {
+    padding: var(--size-xs) calc(var(--size-xll) * 2);
+  }
+}

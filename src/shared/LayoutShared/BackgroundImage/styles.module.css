@@ -1,0 +1,20 @@
+.backgroundWrap {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: -1;
+	filter: opacity(0) grayscale(1);
+	transition: filter 1s ease-out;
+}
+.backgroundWrap.visible {
+	filter: opacity(1) grayscale(0);
+}
+.background {
+	top: 0;
+	width: 100%;
+	height: auto;
+	object-position: center center;
+	object-fit: cover;
+}

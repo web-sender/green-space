@@ -1,0 +1,54 @@
+{
+  "background": {
+  	"mobile": {
+	    "imgUrl": "/main/background.webp",
+	    "altText": "Your forest"
+	  },
+  	"desktop": {
+	    "imgUrl": "/main/dark-woodland-forest.webp",
+	    "altText": "Your forest"
+	  }
+  },
+  "mainLogo": {
+    "imgUrl": "/main/main_logo.webp",
+    "altText": "Green Space"
+  },
+  "navList": [
+    {
+      "url": "#about",
+      "name": "О нас"
+    },
+    {
+      "url": "#why_us",
+      "name": "Почему мы"
+    },
+    {
+      "url": "#contact",
+      "name": "Контакты"
+    }
+  ],
+  "notFound": {
+  	"actions": [
+  		{
+  			"type": "back",
+  			"text": "Извините, данная страница не была найдена.",
+  			"prompt": "Вернуться"
+  		}
+  	]
+  },
+  "months": [
+	  { "ru": "Январь", "en": "January", "zh": "一月" },
+	  { "ru": "Февраль", "en": "February", "zh": "二月" },
+	  { "ru": "Март", "en": "March", "zh": "三月" },
+	  { "ru": "Апрель", "en": "April", "zh": "四月" },
+	  { "ru": "Май", "en": "May", "zh": "五月" },
+	  { "ru": "Июнь", "en": "June", "zh": "六月" },
+	  { "ru": "Июль", "en": "July", "zh": "七月" },
+	  { "ru": "Август", "en": "August", "zh": "八月" },
+	  { "ru": "Сентябрь", "en": "September", "zh": "九月" },
+	  { "ru": "Октябрь", "en": "October", "zh": "十月" },
+	  { "ru": "Ноябрь", "en": "November", "zh": "十一月" },
+	  { "ru": "Декабрь", "en": "December", "zh": "十二月" }
+	],
+	"allowedPathList": ["/"]
+}

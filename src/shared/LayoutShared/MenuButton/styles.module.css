@@ -1,0 +1,41 @@
+.menuButton {
+  border: none;
+  cursor: pointer;
+  padding: var(--size-xs);
+  padding-bottom: calc(var(--size-xs) / 2);
+  color: rgb(var(--color-text-alt));
+  border-radius: 50%;
+  z-index: 105;
+  background-color: rgb(var(--background-alt));
+}
+
+.menuIcon {
+  width: var(--size-btn-menu);
+  height: var(--size-btn-menu);
+  transition: transform .4s ease-in-out;
+}
+.menuButton.active .menuIcon {
+  transform: translateX(-2%) scale(1.3);
+}
+
+.line {
+  fill: none;
+  stroke: rgb(var(--color-text-alt));
+  stroke-width: 3;
+  stroke-linecap: round;
+  transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out, scale 0.4s ease-in-out;
+  transform-origin: left;
+}
+
+.menuButton.active .line1 {
+  transform: translateY(-18%) rotate(45deg);
+}
+
+.menuButton.active .line2 {
+  opacity: 0;
+  transform: scaleX(0.5);
+}
+
+.menuButton.active .line3 {
+  transform: translateY(18%) rotate(-45deg);
+}

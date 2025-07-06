@@ -1,0 +1,137 @@
+.button {
+  padding: 0;
+  position: relative;
+  height: var(--size-md);
+  aspect-ratio: 1 / 1;
+  cursor: pointer;
+  border: none;
+  border-radius: 0;
+  background-color: transparent;
+  touch-action: manipulation;
+}
+
+.corner {
+  position: absolute;
+  width: 30%;
+  height: 30%;
+  transition: transform 0.5s ease-in-out;
+  transform-style: preserve-3d;
+}
+
+.corner::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 2px solid rgb(var(--color-main-head));
+  box-shadow: 0 0 5px rgba(var(--color-main-head), 0.5);
+  box-sizing: border-box;
+}
+
+.button.active .corner {
+  transform: translateX(100%) perspective(500px) rotateY(180deg) rotateX(180deg);
+}
+
+.topLeft {
+  top: 0;
+  left: 0;
+}
+
+.topLeft::before {
+  border-right: none;
+  border-bottom: none;
+}
+
+.topRight {
+  top: 0;
+  right: 0;
+}
+
+.topRight::before {
+  border-left: none;
+  border-bottom: none;
+}
+
+.bottomLeft {
+  bottom: 0;
+  left: 0;
+}
+
+.bottomLeft::before {
+  border-right: none;
+  border-top: none;
+}
+
+.bottomRight {
+  bottom: 0;
+  right: 0;
+}
+
+.bottomRight::before {
+  border-left: none;
+  border-top: none;
+}
+
+
+
+.volumeContainer {
+  width: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.volumeBar {
+  width: 100%;
+  height: 6px;
+  background: rgba(var(--color-main-head), 0.3);
+  border-radius: 3px;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none;
+  position: relative;
+}
+
+.volumeBar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 0;
+  height: 0;
+}
+
+.volumeBar::-moz-range-thumb {
+  width: 0;
+  height: 0;
+  border: none;
+}
+
+.volumeBar::-ms-thumb {
+  width: 0;
+  height: 0;
+}
+
+.volumeBar::-webkit-slider-runnable-track {
+  background: transparent;
+}
+
+.volumeBar::-moz-range-track {
+  background: transparent;
+}
+
+.volumeBar::-ms-track {
+  background: transparent;
+  border: none;
+  color: transparent;
+}
+
+.volumeBar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: rgb(var(--color-main-head));
+  border-radius: 3px;
+  width: var(--volume-width, 0%);
+  transition: width 0.1s linear;
+}

@@ -1,0 +1,116 @@
+.notFound {
+	filter: brightness(1);
+  min-height: 100vh;
+  height: 100vh;
+  overflow: auto;
+  background: url('/main/background.webp') no-repeat center center;
+  background-size: cover;
+	transition: filter 2s ease-out, box-shadow 2s ease-out;
+}
+.notFound.visible {
+	filter: brightness(.7);
+	box-shadow: 0 10vh 10vh #0005;
+}
+.notFoundContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: var(--size-lg);
+	padding: var(--size-lg) 0;
+  height: 100%;
+	padding: var(--size-md);
+	background-color: transparent;
+}
+
+.wrapCodeError {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	filter: opacity(0) brightness(.5);
+	transition: filter 2s ease-out;
+	mix-blend-mode: overlay;
+}
+.notFound.visible .wrapCodeError {
+	filter: opacity(1) brightness(1);
+}
+
+.codeError {
+	font-size: calc(var(--font-xll) * 4.5);
+	color: rgb(var(--color-main-head));
+	animation: text-shadow-animation 2.5s ease-out 1s infinite;
+  filter: blur(.05rem);
+}
+
+@keyframes text-shadow-animation {
+  0% {
+    text-shadow: 0 0 .2rem rgba(0,0,0,0.5);
+    filter: blur(.02rem);
+  }
+  50% {
+    text-shadow: -.2rem .2rem .6rem rgb(var(--color-error));
+    filter: blur(0) saturate(200%);
+  }
+  100% {
+    text-shadow: 0 0 .2rem rgba(0,0,0,0.5);
+    filter: blur(.02rem);
+  }
+}
+
+.actionList {
+	display: flex;
+	justify-content: center;
+	gap: var(--size-sm);
+	flex-wrap: wrap;
+}
+.notFoundBtn {
+	padding: var(--size-sm);
+}
+.wrapAct {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: var(--size-xs);
+	padding: var(--size-sm);
+	backdrop-filter: blur(8px) hue-rotate( var(--hue-rotate) );
+  border: 1.2px solid rgba(var(--background-alt), .15);
+  border-radius: var(--size-sm);
+}
+
+.actMassage {
+	padding: var(--size-xs);
+	font-size: var(--font-md);
+	color: rgb(var(--color-text));
+	text-align: center;
+}
+
+.actBtn {
+	border-radius: var(--size-xs);
+	padding: var(--size-xs) var(--size-sm);
+	transition: transform .3s ease-out, filter .3s ease-out;
+}
+.actBtn:hover {
+	transform: scale(1.05);
+	filter: opacity(.7);
+}
+
+@media (min-width: 1024px) {
+	.codeError {
+	  font-size: calc(var(--font-xll) * 6);
+	}
+	.actMassage {
+		font-size: var(--font-lg);
+	}
+}
+
+@media (min-width: 1080px) and (min-aspect-ratio: 4 / 6) {
+	.notFound {
+		background: url('/main/dark-woodland-forest.webp') no-repeat center center;
+	}
+	.wrapCodeError {
+		filter: opacity(0) brightness(.8);
+	}
+	.notFound.visible .wrapCodeError {
+		filter: opacity(1) brightness(2);
+	}
+}

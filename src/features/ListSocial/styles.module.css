@@ -1,0 +1,26 @@
+.listSocial {
+  display: flex;
+  gap: var(--size-sm);
+  padding: var(--size-xs);
+  justify-content: center;
+}
+.socialItem {
+  border-radius: var(--size-xs);
+  width: 2.5rem;
+  aspect-ratio: 1 / 1;
+  box-shadow: 0 0 .2rem .1rem rgba(var(--color-text), .7);
+  transition: transform .2s ease-in-out, box-shadow .2s ease-in-out;
+  user-select: none;
+  background-color: rgb(var(--background-body));
+}
+.socialItem:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 .3rem .15rem rgba(var(--color-text), .7);
+}
+
+@media (min-width: 768px) {
+  .listSocial {
+    justify-content: flex-start;
+    align-self: end;
+  }
+}

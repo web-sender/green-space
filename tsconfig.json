@@ -1,0 +1,42 @@
+{
+  "compilerOptions": {
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": ["./src/*"],
+      "@/data/*": ["./data/*"],
+      "@/lib/*": ["./lib/*"],
+      "@/hooks/*": ["./lib/hooks/*"],
+      "@/helpers/*": ["./lib/helpers/*"],
+
+      "@/widgets/*": ["./src/widgets/*"],
+      "@/widgets--self/*": ["./src/widgets/SelfWidgets/*"],
+      "@/widgets--layout/*": ["./src/widgets/LayoutWidgets/*"],
+      "@/widgets--section/*": ["./src/widgets/SectionWidgets/*"],
+
+      "@/features/*": ["./src/features/*"],
+      "@/entities/*": ["./src/entities/*"],
+
+      "@/shared/*": ["./src/shared/*"],
+      "@/shared--layout/*": ["./src/shared/LayoutShared/*"],
+      "@/shared--video/*": ["./src/shared/VideoShared/*"]
+    }
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": ["node_modules"]
+}

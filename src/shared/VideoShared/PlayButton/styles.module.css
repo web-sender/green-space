@@ -1,0 +1,147 @@
+
+.button {
+	padding: var(--size-sm);
+  position: relative;
+  aspect-ratio: 1 / 1;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  touch-action: manipulation;
+}
+
+.button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+/*.button.playing.fullscreen {
+	position: absolute;
+  top: calc(80% - (var(--size-md) * 2));
+  left: calc(100% - (var(--size-md) * 2));
+  padding: var(--size-md);
+  z-index: 15;
+}*/
+
+.button.loading .circle {
+  animation: spin 1.5s linear infinite, dash 2s ease-in-out infinite;
+}
+.button:not(.loading) .circle {
+  animation: solidify 0.5s ease forwards;
+}
+.button:not(.loading):not(.playing) {
+  animation: wink 0.6s ease 0.3s;
+}
+
+.circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.loaderCircle {
+  transition: stroke-dasharray 0.5s ease, stroke-dashoffset 0.5s ease;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dasharray: 50, 200;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 150, 200;
+    stroke-dashoffset: -50;
+  }
+  100% {
+    stroke-dasharray: 50, 200;
+    stroke-dashoffset: -100;
+  }
+}
+
+@keyframes solidify {
+  to {
+    stroke-dasharray: 283, 0;
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes wink {
+  0%, 100% {
+    filter: brightness(1);
+    transform: scale(1);
+  }
+  50% {
+    filter: brightness(1.2);
+    transform: scale(1.1);
+  }
+}
+
+.triangle {
+  position: absolute;
+  top: 50%;
+  left: 58%;
+  transform: translate(-50%, -50%) scale(1);
+  width: 35%;
+  height: 40%;
+  background: transparent;
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+.triangle::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: calc(var(--size-xs) * 1.2) solid rgb(var(--color-main-head));
+  border-top: calc(var(--size-xs) * .85) solid transparent;
+  border-bottom: calc(var(--size-xs) * .85) solid transparent;
+  transition: all 0.3s ease;
+}
+
+.button.playing .triangle {
+  left: 40%;
+  width: 2px;
+  height: 40%;
+  background: rgb(var(--color-main-head));
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 0.8;
+}
+
+.button.playing .triangle::before {
+  border-left: 0;
+  border-top: 0;
+  border-bottom: 0;
+  width: 2px;
+  height: 100%;
+}
+
+.line {
+  position: absolute;
+  top: 50%;
+  left: 54%;
+  transform: translate(-50%, -50%) scale(0.5);
+  width: 0;
+  height: 0;
+  background: rgb(var(--color-main-head));
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.button.playing .line {
+  left: 60%;
+  width: 2px;
+  height: 40%;
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 0.8;
+}

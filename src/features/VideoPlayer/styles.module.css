@@ -1,0 +1,32 @@
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  mix-blend-mode: soft-light;
+}
+
+.videoWrap {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.video {
+  width: 100%;
+  object-fit: contain;
+  transition: opacity 1s ease-out;
+	opacity: 0;
+}
+.video.visible {
+	opacity: 1;
+}
+
+.error {
+  position: absolute;
+  top: var(--size-xs);
+  left: var(--size-xs);
+  color: rgb(var(--color-error));
+  font-size: var(--font-xs);
+}

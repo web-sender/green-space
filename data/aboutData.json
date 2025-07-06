@@ -1,0 +1,36 @@
+{
+  "title": "Превращаем офисы в комфортные зоны для работы",
+  "description": "Даже деловая среда должна быть приятной, поэтому мы создаем уникальные проекты, которые способствуют продуктивной работе ваших сотрудников",
+  "videoList": [
+	  {
+	    "url": "/media/GreenSpace_0.mp4",
+	    "type": "video/mp4"
+	  },
+	  {
+	    "url": "/media/GreenSpace_1.mp4",
+	    "type": "video/mp4"
+	  },
+	  {
+	    "url": "/media/GreenSpace_2.mp4",
+	    "type": "video/mp4"
+	  },
+	  {
+	    "url": "/media/GreenSpace_3.mp4",
+	    "type": "video/mp4"
+	  }
+  ],
+  "stats": [
+    {
+      "value": "10 лет",
+      "description": "на рынке"
+    },
+    {
+      "value": "500+",
+      "description": "выполненных проектов"
+    },
+    {
+      "value": "99%",
+      "description": "довольных клиентов"
+    }
+  ]
+}

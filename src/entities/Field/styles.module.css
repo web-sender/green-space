@@ -1,0 +1,81 @@
+.fieldWrapper {
+  position: relative;
+}
+
+.input {
+  width: 100%;
+  padding: var(--size-xs) var(--size-sm);
+  border: 1px solid rgb(var(--color-text));
+  border-radius: var(--size-xs);
+  background-color: rgba(var(--background), 0);
+  backdrop-filter: blur(8px) hue-rotate( var(--hue-rotate) );
+  color: rgb(var(--color-main-head));
+  font-size: var(--font-sm);
+  min-height: calc(var(--font-sm) + var(--size-xs) * 2);
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.input:focus {
+  border-color: rgb(var(--color-main-head));
+  background-color: rgba(var(--background), 0.35);
+  outline: none;
+}
+
+.input.inputError {
+  border-color: rgb(var(--color-error));
+}
+
+.textarea {
+  width: 100%;
+  padding: var(--size-xs) var(--size-sm);
+  border: 1px solid rgb(var(--color-text));
+  border-radius: var(--size-xs);
+  background-color: rgba(var(--background), 0);
+  backdrop-filter: blur(8px) hue-rotate( var(--hue-rotate) );
+  color: rgb(var(--color-main-head));
+  font-size: var(--font-sm);
+  min-height: calc(var(--font-sm) * 3 + var(--size-xs) * 3);
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.textarea:focus {
+  border-color: rgb(var(--color-main-head));
+  background-color: rgba(var(--background), 0.35);
+  outline: none;
+}
+
+.textarea.inputError {
+  border-color: rgb(var(--color-error));
+}
+
+.error {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  color: rgb(var(--color-error));
+  font-size: var(--font-xs);
+  margin-top: var(--size-xs);
+  border: 1px solid rgb(var(--color-text));
+  border-radius: var(--size-xs);
+  background-color: rgba(var(--background-alt), .95);
+  opacity: 0;
+  transition: padding .6s ease-in-out, opacity .6s ease-in-out, z-index .6s ease-in-out;
+}
+.error.visible {
+  z-index: 1;
+  opacity: 1;
+  padding: var(--size-xs);
+}
+
+@media (min-width: 768px) {
+  .input, .textarea {
+    font-size: var(--font-md);
+    padding: var(--size-xs) var(--size-sm);
+  }
+  .input {
+    min-height: calc(var(--font-sm) + var(--size-xs) * 2);
+  }
+  .textarea {
+    min-height: calc(var(--font-md) * 3 + var(--size-xs) * 4);
+  }
+}

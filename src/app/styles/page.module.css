@@ -1,0 +1,28 @@
+.page {
+  min-height: 100svh;
+  font-family: var(--font-geist-sans);
+  background-color: transparent;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-xll);
+  padding: var(--size-sm);
+  background-color: transparent;
+}
+@media (min-width: 480px) and (max-width: 1024px) {
+	.main {
+    padding: var(--size-md);
+	}
+}
+@media (min-width: 1024px) {
+  .main {
+    padding: var(--size-lg);
+  }
+}
+@media (min-width: 1200px) {
+  .main {
+    padding: var(--size-xl);
+  }
+}
